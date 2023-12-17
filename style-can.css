@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+::selection{
+    background-color: #b5e550;
+}
+:root{
+    --main-color:#65B741;
+    --secondary-color:#2C3333;
+    --hover-color:#4caa24;
+    --another-color:#FFB534;
+}
+.main {
+    height: 100vh;
+    overflow: auto;
+}
+.header{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background: white;
+}
+
+.logo img{
+    width: 150px;
+    margin-left: 100px ;
+    cursor: pointer;
+}
+
+.nav{
+    margin-left: 550px;
+    display: flex;
+    flex-direction: row;
+}
+.nav a{
+    width: 120px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    padding: 20px;
+    transition: 0.3s
+}
+.nav a:hover{
+    background:var(--hover-color);
+}
+.container{
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+  margin: 100px 0 30px 100px;
+  column-gap: 15px;
+  row-gap: 30px;
+  height: 100%;
+}
+.container .image{
+    width: 250px;
+    height: 200px;
+    background: var(--secondary-color);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .image img{
+    width: 200px;
+    transition: 0.3s;
+    padding:90px 0 10px 0;
+    transition: transform 0.3s ease;
+}
+.container .image img:hover{
+    transform: scale(1.1);
+}
+.container .image .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 250px;
+    margin-top: 40px;
+}
+.container .image .text h4{
+    color: var(--another-color);
+}
+.container .image .text a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+.adv{
+    position: relative;
+}
+.adv{
+    height: 20px;
+    width: 20px;
+    position: relative; 
+    margin-left: 100px;
+    display: flex;
+}
+.adv input{
+    display: none;
+}
+.adv label{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-top: 30px;
+}
+.adv label i{
+    font-size: 30px;
+    color: var(--main-color);
+}
+.expandableContent {
+    display: none;
+    position: absolute;
+    top: 67px;
+    right: 490px;
+  }
+  .context{
+    background: var(--another-color);
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+  }
+  .context h3{
+    width: 500px;
+    text-align: center;
+  }
+  .context p span{
+    font-weight: 600;
+    color: white;
+    background: var(--main-color);
+    padding: 5px;
+  }
+  .context button{
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    background: var(--secondary-color);
+    color: white;
+  }
+  
+  #expandCheckbox:checked + label + .expandableContent {
+    display: block;
+    width: 100%;
+  }
+  
+  
+@media only screen and (max-width: 600px){
+    .logo img{
+        margin-left: 15px;
+        width: 80px;
+    }
+    .nav {
+        margin-left: 70px;
+    }
+    .nav a{
+        padding: 15px;
+        width: 70px;
+        font-size: 8px;
+    }
+ 
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+    .logo img{
+        margin-left: 15px;
+        width: 140px;
+    }
+    .nav {
+        margin-left: 160px;
+    }
+    .nav a{
+        padding: 15px;
+        width: 120px;
+        font-size: 15px;
+    }
+   
+ 
+}

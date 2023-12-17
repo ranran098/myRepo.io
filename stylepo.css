@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+::selection{
+    background-color: #b5e550;
+}
+:root{
+    --main-color:#65B741;
+    --secondary-color:#2C3333;
+    --hover-color:#4caa24;
+    --another-color:#FFB534;
+}
+.main {
+    background: var(--main-color);
+    height: 100vh;
+    overflow:hidden;
+}
+.header{
+    width: 100%;
+    background: white;
+    display: flex;
+    position: fixed;
+}
+
+.logo img{
+    width: 150px;
+    margin-left: 100px ;
+    cursor: pointer;
+}
+
+.nav{
+    margin-left: 400px;
+    display: flex;
+    flex-direction: row;
+}
+.nav a{
+    width: 130px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    padding: 20px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.nav a:hover{
+    background:var(--hover-color);
+}
+
+.container{
+    background: var(--secondary-color);
+    display: flex;
+    margin-top: 2%;
+    margin-left: 5%;
+    position: relative;
+    width: 920px;
+}
+.container ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    row-gap: 20px;
+    transform: translateX(10px);
+    padding-top: 10px;
+}
+.container li{
+    color: black;
+    background:white;
+    width: 300px;
+    margin-bottom: 10px;
+    font-size: 25px;
+   padding: 15px;
+  
+}
+.container li input{
+    display: none;
+}
+.container li{
+    cursor: pointer;
+    user-select: none;
+    transition: 0.2s;
+}
+.container li label{
+    cursor: pointer;
+}
+.container li:hover{
+    background: var(--another-color);
+}
+.popup {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 15px;
+    z-index: 1;
+    top: 200px;
+  }
+  
+  .popup-checkbox:checked + .popup {
+    display: block;
+  }
+  .headtext{
+    margin: 8% 0 0 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  .headtext h1{
+    font-size: 20px;
+    margin-left: 8%;
+    position: relative;
+    top: 40px;
+    color: white;
+  }
+  .headtext select{
+    width: 200px;
+    margin-left: 500px;
+    position: relative;
+    top: 10px;
+    border: 2px solid var(--another-color);
+    border-radius: 50px;
+    background-color: var(--secondary-color);
+    outline: none;
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    padding-left: 30px;
+    cursor: pointer;
+  }
+  .jan{
+    right: 10px;
+    top: -100px;
+    width: 63%;
+    height: 150%;
+  }
+  .containerpo{
+    display: flex;
+    flex-direction: column;
+   overflow: hidden;
+  }
+  .containerpo .header{
+    background: var(--another-color);
+    width:60%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .containerpo .header p, h5{
+    font-size: 15px;
+  }
+  .containerpo .header p {
+    margin-right: 25%;
+  }
+  .list ul{
+   margin-top: 10%;
+   row-gap:1px;
+
+  }
+  .list ul li{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 530px;
+  }
+  .list ul li:hover{
+    background: var(--secondary-color);
+    color: white;
+  }
+  .list .fa-expand{
+    margin-left: 480px;
+    font-size: 40px;
+  }
+  .iconContainer{
+    position: relative;
+  }
+  .list .fa-expand::after{
+    content: "Expand";
+    background: var(--secondary-color);
+    color: white;
+    font-size: 10px;
+    padding: 5px;
+    position: absolute;
+    display: none;
+    top: 18px;
+    right: 40px;
+  }
+  .list .fa-expand:hover::after{
+    display: block;
+  }
+  .list .fa-ellipsis:hover{
+    color: var(--another-color);
+  }
+
+  @media only screen and (max-width: 600px){
+    .logo img{
+        margin-left: 10px;
+        width: 50px;
+    }
+    .nav {
+        margin-left: 50px;
+        position: relative;
+        z-index: 2;
+    }
+    .nav a{
+        padding: 5px;
+        width: 50px;
+        font-size: 8px;
+    }
+  .headtext{
+    margin:10px 0 0 10px;
+
+  }
+  .headtext h1{
+    font-size: 15px;
+  }
+  .headtext select{
+    margin-left: 200px;
+    width: 150px;
+    height: 25px;
+  }
+  .container{
+    margin: 40px 0 20px 5%;
+    width: 320px;
+  }
+  .main{
+    overflow: auto;
+    z-index: 0;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+    .logo img{
+        margin-left: 15px;
+        width: 120px;
+    }
+    .nav {
+        margin-left: 150px;
+    }
+    .nav a{
+        font-size: 13px;
+        width: 90px;
+    }
+    .main{
+        overflow: auto;
+    }
+    .headtext{
+        margin-top: 80px;
+    }
+    .headtext select{
+        margin-left: 380px;
+        width: 160px;
+    }
+    .container{
+        margin-top: 50px;
+        width: 620px;
+        margin-left: 0;
+    }
+   
+}

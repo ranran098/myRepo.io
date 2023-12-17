@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+::selection{
+    background-color: #b5e550;
+}
+:root{
+    --main-color:#65B741;
+    --secondary-color:#2C3333;
+    --hover-color:#4caa24;
+}
+.main {
+    height: 100vh;
+    overflow: hidden;
+}
+.header{
+    width: 100%;
+    background:white;
+    display: flex;
+    position: fixed; 
+}
+
+.logo img{
+    width: 150px;
+    margin-left: 100px ;
+    cursor: pointer;
+}
+
+.nav{
+    margin-left: 550px;
+    display: flex;
+    flex-direction: row;
+}
+.nav a{
+    width: 120px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    padding: 20px;
+    transition: 0.3s
+}
+.nav a:hover{
+    background:var(--hover-color);
+}
+.container{
+    display: flex;
+    margin-top: 67px;
+    height: 100vh;
+    
+}
+.container .comp{
+  margin: 100px 0 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+    height: 300px;
+}
+.container .comp a{
+    margin-left: 50px;
+}
+.container .compTxt{
+    width: 800px;
+    background: var(--main-color);
+    border-radius: 400px 0 0 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .compTxt p{
+    font-size:1.3rem;
+    margin-left: 20px;
+    width: 400px;
+}
+
+@media only screen and (max-width: 600px){
+    .logo img{
+        margin-left: 15px;
+        width: 80px;
+    }
+    .nav {
+        margin-left: 70px;
+    }
+    .nav a{
+        padding: 15px;
+        width: 70px;
+        font-size: 8px;
+    }
+    .container .comp{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .container .comp img{
+        margin-bottom: 20px;
+        width: 120px;
+        margin-right: 40px;
+    }
+    .container .compTxt{
+        height: 180px;
+        width: 180px;
+       border-radius: 50%;
+    }
+    .container .compTxt p{
+        font-size: 10px;
+        width: 200px;
+    
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+    .logo img{
+        margin-left: 15px;
+        width: 140px;
+    }
+    .nav {
+        margin-left: 160px;
+    }
+    .nav a{
+        padding: 15px;
+        width: 120px;
+        font-size: 15px;
+    }
+    .container .comp{
+        display: flex;
+        flex-direction: column;
+        margin: 50px 0 0 0;
+    }
+    .container .comp img{
+        margin-bottom: 20px;
+        width: 200px;
+    }
+    .container .compTxt{
+        height: 600px;
+       margin-left: 70px;
+    }
+    .container .compTxt p{
+        font-size: 23px;
+        width: 320px;
+    
+    }
+ 
+}

@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+::selection{
+    background-color: #b5e550;
+}
+:root{
+    --main-color:#65B741;
+    --secondary-color:#2C3333;
+    --hover-color:#4caa24;
+    --another-color:#FFB534;
+}   
+.main {
+    height: 100vh;
+    overflow: auto;
+}
+.header{
+    width: 100%;
+    background: white;
+    display: flex;
+    position: fixed;
+}
+
+.logo img{
+    width: 150px;
+    margin-left: 100px ;
+    cursor: pointer;
+}
+
+.nav{
+    margin-left: 550px;
+    display: flex;
+    flex-direction: row;
+}
+.nav a{
+    width: 120px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    padding: 20px;
+    transition: 0.3s
+}   
+.nav a:hover{
+    background:var(--hover-color);
+}
+
+.adv{
+    margin-top: 67px;
+    display: flex;
+    justify-content: space-between;
+    background: #2C3333;
+    height: 250px;
+}
+.adv .imgDesign{
+    margin-top: 25px;
+    background: var(--another-color);
+    border-radius: 500px 20px 200px 200px;
+}
+.adv img{
+    width: 300px;
+    height: 210px;
+    margin-top: -20px;
+}
+.advTXt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-left: 50px;
+}
+.advTXt p{
+    color: white;
+    font-size: 20px;
+}
+.advTXt a{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 40px;
+    background: var(--another-color);
+    transition: 0.3s;
+}
+.advTXt a:hover{
+    transform: scale(.9);
+}
+
+.how{
+    display: flex;
+    margin: 20px 50px 0 50px;
+    gap: 15px;
+}
+.how p{
+    background: var(--main-color);
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.contacts{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background:var(--secondary-color);
+}
+.contacts i{
+    font-size: 30px;
+    padding: 30px;
+    color: var(--another-color);
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    background: var(--main-color);
+}
+.image{
+    display: flex;
+    margin-bottom: 30px;
+}
+.immg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.immg img{
+    margin: 50px 50px 0 50px;
+}   
+.immg a{
+    background: var(--another-color);
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+.immg a:hover{
+    transform: scale(.9)
+}
+.secondBox{
+    display: flex;
+    align-items: center;
+    width: 600px;
+    background: var(--secondary-color);
+    border-radius: 400px 0 0 0;
+}
+.secondBox p{
+    font-size: 15px;
+    width: 500px;
+    font-weight: 600;
+    color: white;
+    margin-left: 100px;
+}
+
+
+
+
+@media only screen and (max-width: 600px){
+    .logo img{
+        margin-left: 10px;
+        width: 70px;
+    }
+    .nav {
+        margin-left: 20px;
+    }
+    .nav a{
+        padding: 15px;
+        width: 70px;
+        font-size: 7px;
+    }
+    .adv{
+        height:95px;
+    }
+    .adv img{
+        width: 100px;
+        height: 90px;
+    }
+    .adv .advTXt{
+        margin-left: 20px;
+        gap: 10px;
+    }
+    .adv .imgDesign{
+        height: 70px;
+    }
+    .adv .advTXt p{
+        width: 200px;
+        margin-top:6px;
+        font-size: 9px;
+    }
+    .adv a{
+        font-size: 7px;
+        width: 70px;
+        text-align: center;
+        padding: 5px;
+    }
+    
+    .how{
+       margin-left: 10px;
+       margin-right: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .how p{
+        width: 160px;
+        height: 80px;
+        font-size: 8px;
+        text-align: left;
+    }
+    .contacts{
+        height: 50px;
+        gap: 10px;
+    }
+    .contacts i{
+       font-size: 15px;
+       padding: 15px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .image{
+        margin-left: 100px;
+        gap: 150px;
+    }
+    .immg{
+        display: flex;
+        width: 20px;
+    }
+    .immg a{
+        width: 60px;
+        padding: 6px;
+        font-size: 7px;
+    }
+    .immg img{
+        margin-top: 20px;
+        width: 100px;
+    }
+    .secondBox{
+        border-radius: 0;
+    }
+    .secondBox p{
+        margin:20px 10px 10px 10px;
+        font-size: 10px;
+    }
+    
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+    .logo img{
+        margin-left: 20px;
+        width: 200px;
+    }
+    .nav {
+        margin-left: 50px;
+    }
+    .nav a{
+        padding: 20px;
+        width: 120px;
+        font-size: 15px;
+    }
+    .adv{
+        margin-top: 80px;
+        height:185px;
+    }
+    .adv img{
+        width: 200px;
+        height: 170 px;
+    }
+    .adv .advTXt{
+        margin-left: 20px;
+        gap: 15px;
+    }
+    .adv .imgDesign{
+        height: 160px;
+    }
+    .adv .advTXt p{
+        width: 400px;
+        margin-top:6px;
+        font-size: 15px;
+    }
+    .adv a{
+        font-size: 10px;
+        width: 100px;
+        text-align: center;
+        padding: 5px;
+    }
+    
+    .how{
+       margin-left: 10px;
+       margin-right: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .how p{
+        width: 750px;
+        height: 70px;
+        font-size: 15px;
+        text-align: left;
+    }
+    .contacts{
+        height: 50px;
+        gap: 70px;
+    }
+    .contacts i{
+       font-size: 15px;
+       padding: 15px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .image{
+        margin-left: 200px;
+        gap: 150px;
+    }
+    .immg{
+        display: flex;
+        width: 20px;
+        margin-right: 100px;
+    }
+    .immg a{
+        width: 100px;
+        padding: 6px;
+        font-size: 12px;
+    }
+    .immg img{
+        margin-top: 20px;
+        width: 200px;
+    }
+    .secondBox{
+        border-radius: 0;
+        width: 100%;
+    }
+    .secondBox p{
+        margin:20px 10px 10px 20px;
+        font-size: 15px;
+        width: 900px;
+    }
+    
+    
+}
+@media only screen and (min-width: 1025px) {
+   
+}

@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+::selection{
+    background-color: #b5e550;
+}
+:root{
+    --main-color:#65B741;
+    --secondary-color:#2C3333;
+    --hover-color:#4caa24;
+    --another-color:#FFB534;
+}
+.main {
+    background: var(--secondary-color);
+    height: 100vh;
+    overflow: auto;
+}
+.header{
+    width: 100%;
+    background: white;
+    display: flex;
+    position: fixed;
+}
+
+.logo img{
+    width: 150px;
+    margin-left: 100px ;
+    cursor: pointer;
+}
+
+.nav{
+    margin-left: 400px;
+    display: flex;
+    flex-direction: row;
+}
+.nav a{
+    width: 130px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    padding: 20px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.nav a:hover{
+    background:var(--hover-color);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.container .headtext {
+    margin: 8% 0 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    
+}
+.container .headtext h1{
+  font-size: 20px;
+  transform: translateX(-200px);
+}
+.container .headtext input{
+    border: 2px solid var(--another-color);
+    border-radius: 50px;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    width: 200px;
+    height: 30px;
+    padding-left:  30px;
+    font-size: 14px;
+}
+.fa-magnifying-glass{
+    font-size: 15px;
+   position: relative;
+   right: 187px;
+   top: 7px;
+   color: #aaa;
+   pointer-events: none;
+}
+.fa-plus{
+    font-size: 20px;
+    margin-top: 5px;
+    cursor: pointer;
+    color: var(--another-color);
+}
+.plusParent{
+    position: relative;
+}
+.fa-plus::after{
+    content:"Add client";
+    color: black;
+    font-size:10px;
+    position: absolute;
+   bottom: 10px;
+   left:18px;
+    margin-left: 8px;
+    background: white;
+    padding: 5px;
+    display: none;
+}
+.fa-plus:hover::after{
+    display: block;
+}
+.fa-plus:hover{
+    color: white;
+}
+.dropdown {
+    background: var(--main-color);
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    margin: auto;
+    padding: 14px;
+    font-size: 20px;
+  }
+  .dropdown:hover{
+    background: white;
+  }
+  .dropdown .dropdown-content p{
+    color: black;
+    width: 400px;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+  }
+  .dropdown .dropdown-content p i{
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+  }
+  .dropdown .dropdown-content p i:hover{
+    color: white;
+  }
+  
+  .dropdown .dropdown-content {
+    transform: translateX(-20px);
+    display: none;
+    position: absolute;
+    background-color:#FFB534;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown h5 {
+    display: flex;
+    justify-content: space-between;
+    color:black;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .fa-pen-to-square:hover{
+    color: var(--another-color);
+  }
+  @media only screen and (max-width: 600px){
+    .logo img{
+        margin-left: 10px;
+        width: 50px;
+    }
+    .nav {
+        margin-left: 50px;
+        position: relative;
+        z-index: 2;
+    }
+    .nav a{
+        padding: 5px;
+        width: 50px;
+        font-size: 8px;
+    }
+    .container .headtext{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .container h1 {
+        font-size: 30px;    
+        margin: 40px 0 20px 310px;
+        width:200px;
+       position: relative;
+    }
+    .container .headtext input{
+        margin-left:85px;
+    }
+    .fa-plus{
+        margin-left:300px;
+        transform: translateY(-45px);
+    }
+    .dropdown {
+        margin-bottom: 20px;
+        width: 100%;
+        height: 90px;
+        z-index: 1;
+    }
+  
+}
+@media only screen and (min-width: 601px) and (max-width: 1024px){
+    .logo img{
+        margin-left: 15px;
+        width: 120px;
+    }
+    .nav {
+        margin-left: 90px;
+    }
+    .nav a{
+        padding: 10px;
+        width: 100px;
+        font-size: 15px;
+    }
+    .container h1 {
+        font-size: 60px;
+        margin-left: 20%;
+        padding-bottom: 40px;
+    }
+    .dropdown {
+       width: 90%;
+       padding: 30px;
+       font-size: 30px;
+    }
+    .container .headtext{
+        margin-top: 90px;
+    }
+   
+}
